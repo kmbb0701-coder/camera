@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuntilanak</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      color: red;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+
+  img {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 100px red;
+}
+ 
+      display: none;
+    }
+
+    h2 {
+      color: red;
+      text-shadow: 0 0 10px red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Klik di mana saja...</h2>
+
+  <!-- Gambar kuntilanak -->
+  <img id="ghost" src="https://tse1.mm.bing.net/th/id/OIP.1vHVoj7nk9itTQ68W4kRkAHaEC?pid=Api&P=0&h=180" alt="Kuntilanak">
+
+  <!-- Audio YouTube diganti dengan MP3 agar bisa autoplay -->
+  <audio id="laugh" src="camera.mp3"></audio>
+
+  <script>
+    const img = document.getElementById('ghost');
+    const audio = document.getElementById('laugh');
+    const text = document.querySelector('h2');
+
+    document.body.addEventListener('click', () => {
+      text.style.display = 'none';
+      img.style.display = 'block';
+      audio.play();
+    });
+  </script>
+</body>
+</html>
